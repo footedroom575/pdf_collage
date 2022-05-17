@@ -13,13 +13,6 @@ function got_param() {
     done
 }
 
-
-# output error if no first arg is given
-if [ -z "$1" ]; then
-    echo "Usage: ppt2pdf <file.pdf | file.pptx>"
-    exit 1
-fi
-
 # set OUTPUT_DIR to -o parameter if given else set default value
 if [[ -n $(got_param "-o --output" "$@") ]]
 then
